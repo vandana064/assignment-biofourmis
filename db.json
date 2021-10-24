@@ -1,0 +1,104 @@
+{
+  "domainList": [
+    {
+      "id": 1,
+      "domain": "xyz.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "avaiableDomains": 10,
+      "status": "Active",
+      "usedDomians": 4,
+      "monthlyVisitorCapacity": 10000,
+      "monthlyVisitor": 100,
+      "subdomain": [
+        {
+          "id": 1,
+          "name": "abc.com",
+          "usedStorage": "10gb",
+          "domainTag": "Staging",
+          "monthlyVisitor": 700,
+          "status": "Inactive"
+        },
+        {
+          "id": 12,
+          "name": "abef.xyz.com",
+          "usedStorage": "40gb",
+          "domainTag": "Add on",
+          "monthlyVisitor": 1100,
+          "status": "Inactive"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "domain": "xyz.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "avaiableDomains": 10,
+      "usedDomians": 1,
+      "monthlyVisitorCapacity": 10000,
+      "monthlyVisitor": 2100,
+      "subdomain": [],
+      "status": "Inactive"
+    },
+    {
+      "id": 3,
+      "domain": "xyz.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "avaiableDomains": 10,
+      "usedDomians": 1,
+      "monthlyVisitorCapacity": 10000,
+      "monthlyVisitor": 2100,
+      "subdomain": [],
+      "status": "Inactive"
+    },
+    {
+      "domain": "test.com",
+      "usedStorage": "2gb",
+      "subdomain": [
+        {
+          "id": 1,
+          "name": "ok.com",
+          "usedStorage": "10gb",
+          "domainTag": "Staging",
+          "monthlyVisitor": 700,
+          "status": "Inactive"
+        }
+      ],
+      "monthlyVisitor": 5,
+      "storage": "100gb",
+      "domainTag": "Primary",
+      "avaiableDomains": 10,
+      "status": "Active",
+      "usedDomians": 1,
+      "monthlyVisitorCapacity": 10000,
+      "id": 4
+    },
+    {
+      "domain": "something.com",
+      "usedStorage": "98gb",
+      "subdomain": [
+        {
+          "id": 1,
+          "name": "pop.com",
+          "usedStorage": "10gb",
+          "domainTag": "Staging",
+          "monthlyVisitor": 700,
+          "status": "Inactive"
+        }
+      ],
+      "monthlyVisitor": 9665,
+      "storage": "100gb",
+      "domainTag": "Primary",
+      "avaiableDomains": 10,
+      "status": "Active",
+      "usedDomians": 1,
+      "monthlyVisitorCapacity": 10000,
+      "id": 5
+    }
+  ]
+}

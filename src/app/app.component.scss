@@ -1,0 +1,12 @@
+@import './shared';
+.container {
+    display: flex;
+    min-height: 100vh;
+    .sidenav {
+        flex: 0.25;
+    }
+    .main {
+        flex: 0.75;
+        background-color: $neutral-4;
+    }
+}

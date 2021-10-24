@@ -1,0 +1,23 @@
+<app-modal #modal></app-modal>
+<div class="site-details">
+  <div class="header">
+    <h1>Site Details</h1>
+    <button type="button" (click)="addNewSite()">+ Add New Site</button>
+  </div>
+  <div class="list-details">
+    <div class="entries">
+      <label for="entries">Show </label>
+      <select name="entries" id="entries">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+      </select>
+      Entries
+      <input type="text" placeholder="Search Records" [ngModel]="searchText" (ngModelChange)="onChange($event)">
+    </div>
+    <div class="details">
+        <app-details-table></app-details-table>
+    </div>
+  </div>
+</div>

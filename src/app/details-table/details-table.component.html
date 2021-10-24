@@ -1,0 +1,62 @@
+<div class="details-table">
+  <table>
+    <thead>
+      <td>Domain & Plan Name</td>
+      <td>Storage</td>
+      <td>Monthly Visitor</td>
+      <td>Domains</td>
+      <td>Status</td>
+    </thead>
+    <tbody *ngIf="$siteDetails | async as data">
+      <ng-container *ngFor="let item of data"
+        ><tr class="detail-row" (click)="expandRow(item)">
+          <td>{{ item.domain }}</td>
+          <td>
+            <div class="progress-bar">
+              <span
+                [ngStyle]="{ width: calculateProgress(item, 'storage') }"
+              ></span>
+            </div>
+            <div>{{ item.usedStorage }} of {{ item.storage }}</div>
+          </td>
+          <td>
+            <div class="progress-bar">
+              <span [ngStyle]="{ width: calculateProgress(item, '') }"></span>
+            </div>
+            <div>
+              {{ item.monthlyVisitor }} of {{ item.monthlyVisitorCapacity }}
+            </div>
+          </td>
+          <td>
+            <div class="domains">
+              {{ item.usedDomians }} / {{ item.avaiableDomains }}
+            </div>
+          </td>
+          <td>{{ item.status }}</td>
+        </tr>
+        <ng-container *ngIf="item.rowExpanded && item.subdomain?.length">
+        <tr
+          class="subdomain-row" *ngFor="let subitem of item.subdomain"
+          
+        >
+            <td>{{ subitem.name }}</td>
+            <td>
+              <div>{{ subitem.usedStorage }}</div>
+            </td>
+            <td>
+              <div>
+                {{ subitem.monthlyVisitor }}
+              </div>
+            </td>
+            <td>
+              <div class="domains">
+                {{ subitem.domainTag }}
+              </div>
+            </td>
+            <td>{{ subitem.status }}</td></tr>
+          </ng-container>
+        </ng-container
+      >
+    </tbody>
+  </table>
+</div>

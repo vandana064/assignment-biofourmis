@@ -1,0 +1,52 @@
+@import '../shared';
+
+.details-table {
+    table {
+        border-collapse: separate;
+        border-spacing: 0 1rem;
+        td:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        td:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        thead {
+            font-size: 14px;
+            background: $neutral-5;
+            color: $neutral-2;
+            padding: 10px;
+            border-radius: 10px;
+            td {
+                padding: 10px;
+            }
+        }
+    }
+    .detail-row {
+        background: #ffffff;
+        margin: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        td {
+            padding: 20px;
+        }
+        .domains {
+            border-radius: 50%;
+            border: 5px solid $primary-1;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            width: 70px;
+        }
+    }
+    .subdomain-row {
+        // background: $neutral-5;
+        padding: 5px;
+        td {
+            padding: 20px;
+        }
+    }
+}

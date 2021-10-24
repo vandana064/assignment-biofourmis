@@ -1,0 +1,31 @@
+@import '../shared';
+
+.side-navbar {
+    background-color: $primary-1;
+    height: 100%;
+    padding: 10rem 0;
+    color: #ffffff;
+    .user-details {
+        text-align: center;
+        .user-img {
+            padding: 10px;
+        }
+        .user-email {
+            font-size: 12px;
+            color: $neutral-4;
+
+        }
+    }
+    .links {
+        margin-top: 50px;
+        .link {
+            cursor: pointer;
+            padding: 20px 20px 20px 25px;
+            color: $neutral-5;
+            &.active {
+                background-color: darken($color: $primary-1, $amount: 6);
+                color: #ffffff;
+            }
+        }
+    }
+}

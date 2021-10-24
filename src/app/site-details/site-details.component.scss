@@ -1,0 +1,28 @@
+@import '../shared';
+.site-details {
+    padding: 50px;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .list-details {
+        margin-top: 20px;
+        font-weight: 700;
+        select {
+            background: $neutral-4;
+            padding: 10px;
+            color: $primary-1;
+            border-radius: 5px;
+            border: 1px solid $neutral-6;
+            margin: 0 10px;
+        }
+        input {
+            outline: none;
+            border: none;
+            background: $neutral-4;
+            padding: 10px;
+            margin-left: 5px;
+        }
+    }
+}

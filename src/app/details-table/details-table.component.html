@@ -7,9 +7,10 @@
       <td>Domains</td>
       <td>Status</td>
     </thead>
-    <tbody *ngIf="$siteDetails | async as data">
-      <ng-container *ngFor="let item of data"
-        ><tr class="detail-row" (click)="expandRow(item)">
+    <tbody *ngIf="domainData as data">
+      <ng-container *ngFor="let item of data">
+        <tr class="spacer"></tr>
+        <tr class="detail-row" (click)="expandRow(item)">
           <td>{{ item.domain }}</td>
           <td>
             <div class="progress-bar">
@@ -35,10 +36,7 @@
           <td>{{ item.status }}</td>
         </tr>
         <ng-container *ngIf="item.rowExpanded && item.subdomain?.length">
-        <tr
-          class="subdomain-row" *ngFor="let subitem of item.subdomain"
-          
-        >
+          <tr class="subdomain-row" *ngFor="let subitem of item.subdomain">
             <td>{{ subitem.name }}</td>
             <td>
               <div>{{ subitem.usedStorage }}</div>
@@ -53,10 +51,10 @@
                 {{ subitem.domainTag }}
               </div>
             </td>
-            <td>{{ subitem.status }}</td></tr>
-          </ng-container>
-        </ng-container
-      >
+            <td>{{ subitem.status }}</td>
+          </tr>
+        </ng-container>
+      </ng-container>
     </tbody>
   </table>
 </div>

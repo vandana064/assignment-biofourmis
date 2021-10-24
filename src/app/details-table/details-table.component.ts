@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { DataService } from '../data.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-details-table',
@@ -8,14 +6,10 @@ import { DataService } from '../data.service';
   styleUrls: ['./details-table.component.scss']
 })
 export class DetailsTableComponent implements OnInit {
-  $siteDetails: Observable<any>;
-
-  constructor(private dataService: DataService) {
-    this.$siteDetails = dataService.getDomainDetails();
-   }
-
+  @Input('domaindata') domainData: Array<any>;
 
   ngOnInit(): void {
+    console.log(this.domainData)
   }
 
   calculateProgress(item, type): String {

@@ -12,19 +12,34 @@ export class SiteDetailsComponent implements OnInit {
 
   searchText: String;
   domainData = [];
+  filteredData = [];
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    this.dataService.getDomainDetails().subscribe(
+      (res) => {
+        this.domainData = res;
+        this.filteredData = this.domainData;
+      },
+      (err) => console.log(err)
+    );
   }
 
   addNewSite() {
-    console.log('works');
     this.modal.open();
   }
 
   onChange(newVal) {
-    console.log(newVal);
     this.searchText = newVal;
+    this.filteredData = newVal
+      ? this.domainData.filter(
+          (f) =>
+            f.domain.toLowerCase().includes(newVal.toLowerCase()) ||
+            !!f.subdomain.filter((sf) =>
+              sf.name.toLowerCase().includes(newVal.toLowerCase())
+            ).length
+        )
+      : this.domainData;
   }
 }

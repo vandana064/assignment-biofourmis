@@ -17,7 +17,7 @@
       <input type="text" placeholder="Search Records" [ngModel]="searchText" (ngModelChange)="onChange($event)">
     </div>
     <div class="details">
-        <app-details-table></app-details-table>
+        <app-details-table [domaindata]="filteredData"></app-details-table>
     </div>
   </div>
 </div>

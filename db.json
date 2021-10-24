@@ -99,6 +99,28 @@
       "usedDomians": 1,
       "monthlyVisitorCapacity": 10000,
       "id": 5
+    },
+    {
+      "domain": "rest",
+      "usedStorage": "100gb",
+      "subdomain": [
+        {
+          "id": 1,
+          "name": "test",
+          "usedStorage": "10gb",
+          "domainTag": "Staging",
+          "monthlyVisitor": 700,
+          "status": "Inactive"
+        }
+      ],
+      "monthlyVisitor": 1000,
+      "storage": "100gb",
+      "domainTag": "Primary",
+      "avaiableDomains": 10,
+      "status": "Active",
+      "usedDomians": 1,
+      "monthlyVisitorCapacity": 10000,
+      "id": 6
     }
   ]
 }
